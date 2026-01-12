@@ -1,34 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
   <title>Frontend Mentor | Blog preview card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .Container {
+      /* Setting display: flex, creates the flex container. Now, all direct children of the container become flex items */
+      display: flex;
+
+      /* centers the card horizontally */
+      justify-content: center;
+      /* centers the card vertically */
+      align-items: center;
+      /* Ensure the container takes full viewport height */
+      height: 100vh;
+
+      background-color: hsl(47, 88%, 63%);
+      font-family: 'Figtree', sans-serif;
+    }
+
+    .Card {
+      background-color: hsl(0, 0%, 100%);
+      width: 344px;
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid black;
+      box-shadow: 10px 10px black
+    }
+
+    .Card_image {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: 24px;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    a:hover{
+      color: hsl(47, 88%, 63%);
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .Pill p {
+      width: fit-content;
+      background-color: hsl(47, 88%, 63%);
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+    .Detail {
+      color: hsl(0, 0%, 42%);
+      font: 500 16px/24px 'Figtree', sans-serif;
+    }
+
+    .Author{
+      display: flex;
+      height: 32px;
+      align-items: center;
+     }
+
+    .Author_image{
+      height: 100%;
+    }
+
+    .Author_name{
+      font-weight: 800;
+      padding-left: 5px;
+    }
+          
+
   </style>
 </head>
-<body>
 
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<body class="Container">
+  <div class="Card">
+    <img src="assets/images/illustration-article.svg" alt="Geometrical shapes illustration" class="Card_image">
+    <div class="Pill">
+      <p>Learning</p>
+    </div>
+    <p class="Date">Published 21 Dec 2023</p>
+    <h1><a href="https://catoftheday.com/">HTML & CSS foundations</a></h1>
+    <p class="Detail">These languages are the backbone of every website, defining structure, content, and presentation.
+    </p>
+    <div class="Author">
+      <img src="assets/images/image-avatar.webp" alt="Photo of the author" class="Author_image">
+      <p class="Author_name">Greg Hooper</p>
+    </div>
   </div>
 </body>
+
 </html>
